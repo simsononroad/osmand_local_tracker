@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osmand online tracker</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/main.js"></script>
+</head>
+
+<body>
+    <h1>Osmand online tracker</h1>
+    <div class="login">
+        <div class="form-box" id="login">
+            <form class="form">
+                <span class="title">Regisztráció</span>
+                <span class="subtitle">Lépj be vagy hozz létre egy fiókot</span>
+                <div class="form-container">
+                    <input type="text" class="input" placeholder="Teljes név">
+                    <input type="password" class="input" placeholder="jelszó">
+                </div>
+                <button onclick="NoUser()">Nincs fiókom</button>
+                <button>Belépés</button>
+            </form>
+        </div>
+        <div class="form-box" id="register">
+            <form class="form">
+                <span class="title">Bejelentkezés</span>
+                <span class="subtitle">Lépj be vagy hozz létre egy fiókot</span>
+                <div class="form-container">
+                    <input type="text" class="input" placeholder="Teljes név">
+                    <input type="password" class="input" placeholder="jelszó">
+                </div>
+                <button onclick="HaveUser()">Van fiókom</button>
+                <button onclick="window.open('/zes')">Regisztráció</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

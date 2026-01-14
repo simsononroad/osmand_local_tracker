@@ -7,7 +7,7 @@ import datetime
 import hashlib
 from datetime import datetime
 import csv
-from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String
+from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String, insert
 
 app = Flask(__name__)
 app.secret_key = "teszt_kulcs"
@@ -23,6 +23,10 @@ users = Table(
     Column('passw', String, nullable=False)
 )
 meta.create_all(db)
+conn = db.connect()
+insert_def_user = users.insert(users).values(name="admin", passw="admin")
+commits = conn.execute(insert_def_user)
+conn.commit()
 
 @app.route("/")
 def home():

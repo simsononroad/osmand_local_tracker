@@ -87,3 +87,30 @@
     display: flex;
     margin: 10px;
 }
+
+
+
+
+
+
+
+.navbar{
+  background-color: #e0ecfb;
+  height: 4rem;
+  border-radius: 10px;
+}
+.navbar>ul{
+  height: 100%;
+  text-align: center;
+  /*justify-content: center;*/
+  align-items: center;
+  display: flex;
+}
+.navbar>ul>li{
+  text-decoration:none;
+  font-style:normal;
+  list-style: none;
+  list-style-type: none;
+  padding-right: 1rem;
+  color: white;
+}

@@ -24,13 +24,17 @@ users = Table(
 )
 meta.create_all(db)
 conn = db.connect()
-insert_def_user = users.insert(users).values(name="admin", passw="admin")
-commits = conn.execute(insert_def_user)
+#insert_def_user = users.insert(users).values(name="admin", passw="admin")
+#commits = conn.execute(insert_def_user)
 conn.commit()
 
 @app.route("/")
 def home():
     return render_template("index.html")
+
+@app.route("/no_user")
+def no_user():
+    return render_template("base.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
